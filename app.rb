@@ -8,6 +8,7 @@ require 'json'
 helpers do
   def giphy(keyword ,limit_number)
     url = "http://api.giphy.com/v1/gifs/search?q="+URI.encode(keyword)+"&api_key=gFEQT6dZUmUK8AvfIyE93m2fB6U1o7aV&limit="+limit_number.to_s
+
     resp = Net::HTTP.get_response(URI.parse(url))
     buffer = resp.body
     result = JSON.parse(buffer)
@@ -16,7 +17,7 @@ helpers do
 end
 
 before do
-  @url = giphy("funny" ,12)
+  @url = giphy("cat" ,21)
 end
 
 get '/' do
@@ -28,6 +29,6 @@ end
 post '/search' do
   puts params[:word]
 
-  @url = giphy(params[:word] ,9)
+  @url = giphy(params[:word] ,21)
   erb :index
 end

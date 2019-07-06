@@ -8,14 +8,6 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-   <div class="head">
-    <div class="search">
-
-    <form action="/search" method="POST">
-      <input type="text" name="word" placeholder="search">
-    </form>
-        <%# <img src="search.png" alt=""> %>
-   </div>
     <a class="btn"></a>
 <div class="drawr">
    <h2>並べ替え</h2>
@@ -30,87 +22,182 @@
         <li><a href="#">動物/animal</a>
     <ul>
       <li class="#">
-      <form action="/search" method="POST">
-      <button type="submit" name="word" value="犬" placeholder="犬/dog">
+        <form name="menu1_1" action="/search" method="POST">
+        <input type="hidden" name="word" value="animal cute" placeholder="可愛い/cute">
+        <a href="javascript:menu1_1.submit()">可愛い/cute</a>
+        </form>
+      </li>
+      <li class="#">
+        <form name="menu1_2" action="/search" method="POST">
+        <input type="hidden" name="word" value="animal funny" placeholder="面白い/funny">
+        <a href="javascript:menu1_2.submit()">面白い/funny</a>
+        </form>
+      </li>
+      <li class="#">
+        <form name="menu1_3" action="/search" method="POST">
+        <input type="hidden" name="word" value="animal cool" placeholder="カッコいい/cool">
+        <a href="javascript:menu1-3.submit()">カッコいい/cool</a>
+        </form>
+      </li>
+      <li class="#">
+      <form name="menu1_4" action="/search" method="POST">
+      <input type="hidden" name="word" value="animal excited" placeholder="楽しい/excited">
+      <a href="javascript:menu1_4.submit()">楽しい/excited</a>
+      </form>
+      </li>
+    </ul>
+  </li>
+       <li><a href="#">アニメ/anime</a>
+    <ul>
+      <li class="#">
+      <form name="menu2_1" action="/search" method="POST">
+      <input type="hidden" name="word" value="anime cute" placeholder="可愛い/cute">
+      <a href="javascript:menu2_1.submit()">可愛い/cute</a>
       </form>
       </li>
       <li class="#">
-      <form action="/search" method="POST">
-      <button type="submit" name="word" value="猫" placeholder="猫/cat">
+      <form name="menu2_2" action="/search" method="POST">
+      <input type="hidden" name="word" value="anime funny" placeholder="面白い/funny">
+      <a href="javascript:menu2_2.submit()">面白い/funny</a>
       </form>
       </li>
       <li class="#">
-      <form action="/search" method="POST">
-      <button type="submit" name="word" value="ウサギ" placeholder="兎/rabbit">
+      <form name="menu2_3" action="/search" method="POST">
+      <input type="hidden" name="word" value="anime cool" placeholder="カッコいい/cool">
+      <a href="javascript:menu2_3.submit()">カッコいい/cool</a>
       </form>
       </li>
       <li class="#">
-      <form action="/search" method="POST">
-      <button type="submit" name="word" value="キツネ" placeholder="狐/fox">
+      <form name="menu2_4" action="/search" method="POST">
+      <input type="hidden" name="word" value="anime excited" placeholder="楽しい/excited">
+      <a href="javascript:menu2_4.submit()">楽しい/excited</a>
       </form>
       </li>
     </ul>
   </li>
-       <li><a href="#">アニメ/animation</a>
+       <li><a href="#">人/people</a>
     <ul>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
+<li class="#">
+      <form name="menu3_1" action="/search" method="POST">
+      <input type="hidden" name="word" value="people cute" placeholder="可愛い/cute">
+      <a href="javascript:menu3_1.submit()">可愛い/cute</a>
+      </form>
+      </li>
+      <li class="#">
+      <form name="menu3_2" action="/search" method="POST">
+      <input type="hidden" name="word" value="people funny" placeholder="面白い/funny">
+      <a href="javascript:menu3_2.submit()">面白い/funny</a>
+      </form>
+      </li>
+      <li class="#">
+      <form name="menu3_3" action="/search" method="POST">
+      <input type="hidden" name="word" value="people cool" placeholder="カッコいい/cool">
+      <a href="javascript:menu3_3.submit()">カッコいい/cool</a>
+      </form>
+      </li>
+      <li class="#">
+      <form name="menu3_4" action="/search" method="POST">
+      <input type="hidden" name="word" value="people excited" placeholder="楽しい/excited">
+      <a href="javascript:menu3_4.submit()">楽しい/excited</a>
+      </form>
+      </li>
     </ul>
   </li>
-       <li><a href="#">おもしろ/fanny</a>
+       <li><a href="#">スイーツ/sweets</a>
     <ul>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
+      <li class="#">
+      <form name="menu4_1" action="/search" method="POST">
+      <input type="hidden" name="word" value="sweets cute" placeholder="可愛い/cute">
+      <a href="javascript:menu4_1.submit()">可愛い/cute</a>
+      </form>
+      </li>
+      <li class="#">
+      <form name="menu4_2" action="/search" method="POST">
+      <input type="hidden" name="word" value="sweets funny" placeholder="面白い/funny">
+      <a href="javascript:menu4_2.submit()">面白い/funny</a>
+      </form>
+      </li>
+      <li class="#">
+      <form name="menu4_3" action="/search" method="POST">
+      <input type="hidden" name="word" value="sweets cool" placeholder="カッコいい/cool">
+      <a href="javascript:menu4_3.submit()">カッコいい/cool</a>
+      </form>
+      </li>
+      <li class="#">
+      <form name="menu4_4" action="/search" method="POST">
+      <input type="hidden" name="word" value="sweets excited" placeholder="楽しい/excited">
+      <a href="javascript:menu4_4.submit()">楽しい/excited</a>
+      </form>
+      </li>
     </ul>
   </li>
-       <li><a href="#">かわいい/pretty</a>
+       <li><a href="#">映画/movie</a>
     <ul>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
-    </ul>
-  </li>
-       <li><a href="#">シュ-ル/Surrealism</a>
-    <ul>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
-      <li><a href="#">submenu</a></li>
+      <li class="#">
+      <form name="menu5_1" action="/search" method="POST">
+      <input type="hidden" name="word" value="movie cute" placeholder="可愛い/cute">
+      <a href="javascript:menu5_1.submit()">可愛い/cute</a>
+      </form>
+      </li>
+      <li class="#">
+      <form name="menu5_2" action="/search" method="POST">
+      <input type="hidden" name="word" value="movie funny" placeholder="面白い/funny">
+      <a href="javascript:menu5_2.submit()">面白い/funny</a>
+      </form>
+      </li>
+      <li class="#">
+      <form name="menu5_3" action="/search" method="POST">
+      <input type="hidden" name="word" value="movie cool" placeholder="カッコいい/cool">
+      <a href="javascript:menu5_3.submit()">カッコいい/cool</a>
+      </form>
+      </li>
+      <li class="#">
+      <form name="menu5_4" action="/search" method="POST">
+      <input type="hidden" name="word" value="movie excited" placeholder="楽しい/excited">
+      <a href="javascript:menu5_4.submit()">楽しい/excited</a>
+      </form>
+      </li>
     </ul>
   </li>
          </ul>
     </div>
     </div>
+    <div class="head">
+    <div class="search">
+      <form action="/search" method="POST">
+        <input type="text" name="word" placeholder="search" style="margin-top: 0px;
+    height: 42px;">
+      </form>
+        <%# <img src="search.png" alt=""> %>
+   </div>
     <div class="main">
         <div class="trend">
           <div class="box"><p>トレンド/TREND</p></div>
-            <div style="width:100vw;">
+            <div style="width:100vw; margin:0">
+              <%# もし、gifがあったなら %>
               <% if !@url.nil?%>
-              <% @url.each do |item| %>
-                  <img src= "<%= item["images"]["fixed_height"]["url"] %>"  >
-              <% end %>
+               <% count = 0 %>
+                <% @url.each do |item| %>
+                  <%# 4で割って余りが０の時、divで括る %>
+                  <% if count % 4 == 0 %>
+                    <div class="flex" align="center">
+                  <% end %>
+                    <img src= "<%= item["images"]["fixed_height"]["url"] %>"  >
+                    <%# 毎回一ずつ増やす %>
+                    <% count += 1 %>
+                  <%# 4で割って余りが3の時divを閉じる＋カウントを０に戻す %>
+                  <% if count % 4 == 3 %>
+                    </div>
+                    <% count = 0 %>
+                  <% end %>
+                <% end %>
               <% end %>
     </div>
-         <%# <div class="gif gif1"><img class="gifcontent" src="img/gif.gif" alt=""></div>
-         <div class="gif"><img class="gifcontent" src="img/gif2.gif" alt=""></div>
-         <div class="gif"><img class="gifcontent" src="img/gif3.gif" alt=""></div>
-         <div class="gif gif1"><img class="gifcontent" src="img/gif4.gif" alt=""></div>
-         <div class="gif"><img class="gifcontent" src="img/gif5.gif" alt=""></div>
-         <div class="gif"><img class="gifcontent" src="img/gif5.gif" alt=""></div> %>
+
         </div>
         <div>
            <div class="box"><p>ベーシック/basic</p></div>
-            <div class="gif gif1"><img class="gifcontent" src="img/gif6.gif" alt=""></div>
-            <div class="gif"><img class="gifcontent" src="img/gif7.gif" alt=""></div>
-            <div class="gif"><img class="gifcontent" src="img/gif8.gif" alt=""></div>
-            <div class="gif gif1"><img class="gifcontent" src="img/gif9.gif" alt=""></div>
-            <div class="gif"><img class="gifcontent" src="img/gif9.gif" alt=""></div>
-            <div class="gif"><img class="gifcontent2" src="img/gif10.gif" alt=""></div>
+
         </div>
     </div>
     <script
