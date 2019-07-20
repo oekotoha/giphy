@@ -15,6 +15,7 @@
     margin-left: 51px;
     background: #D0F4EA;
     margin: 0 100px 0 100px;
+    align-items: center;
 
 }
 .gif{
@@ -169,9 +170,9 @@ p{
 
 body{
   background-color: #D0F4EA;
-  margin: 25px;
 }
 
 .category{
-  margin: 5px;
+  padding: 9px;
+  background-color: #fff;
 }
