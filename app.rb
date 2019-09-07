@@ -30,10 +30,11 @@ end
 
 before do
   @url = trending(21)
+  @trend = false
 end
 
 get '/' do
-
+  @trend = true
   erb :index
 end
 
@@ -42,7 +43,7 @@ post '/search' do
   puts params[:word]
   @word = params[:word]
 
-  @url = giphy(params[:word] ,21)
+  @url = giphy(params[:word] ,10000)
 
   if params[:sort] == "new" then
     @url = @url.sort do |a,b|
@@ -55,7 +56,8 @@ post '/search' do
       b["trending_datetime"] <=> a["trending_datetime"]
     end
   end
- 
+
+  @url = @url[0,21]
 
   erb :index
 end
