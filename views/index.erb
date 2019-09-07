@@ -12,9 +12,18 @@
 <div class="drawr">
    <h2>並べ替え</h2>
     <ul id="menu">
-    <li><a href="#">新着順</a></li>
-    <li><a href="#">人気順</a></li>
-    <li><a href="#">急上昇</a></li>
+      <li>
+        <form action="/search" method="POST">
+        <input type="hidden" name="word" value="<%= @word %>">
+        <input type="hidden" name="sort" value="new">
+        <input type="submit" value="新着順">
+        </form>
+      </li>
+    <li><form action="/search" method="POST">
+        <input type="hidden" name="word" value="<%= @word %>">
+        <input type="hidden" name="sort" value="popular">
+        <input type="submit" value="人気順">
+        </form></li>
     </ul>
 </div>
     <div class="category">
@@ -103,29 +112,29 @@
       </li>
     </ul>
   </li>
-       <li><a href="#">スイーツ/sweets</a>
+       <li><a href="#">スイーツ/suites</a>
     <ul>
       <li class="#">
       <form name="menu4_1" action="/search" method="POST">
-      <input type="hidden" name="word" value="sweets cute" placeholder="可愛い/cute">
+      <input type="hidden" name="word" value="suites cute" placeholder="可愛い/cute">
       <a href="javascript:menu4_1.submit()">可愛い/cute</a>
       </form>
       </li>
       <li class="#">
       <form name="menu4_2" action="/search" method="POST">
-      <input type="hidden" name="word" value="sweets funny" placeholder="面白い/funny">
+      <input type="hidden" name="word" value="suites funny" placeholder="面白い/funny">
       <a href="javascript:menu4_2.submit()">面白い/funny</a>
       </form>
       </li>
       <li class="#">
       <form name="menu4_3" action="/search" method="POST">
-      <input type="hidden" name="word" value="sweets cool" placeholder="カッコいい/cool">
+      <input type="hidden" name="word" value="suites cool" placeholder="カッコいい/cool">
       <a href="javascript:menu4_3.submit()">カッコいい/cool</a>
       </form>
       </li>
       <li class="#">
       <form name="menu4_4" action="/search" method="POST">
-      <input type="hidden" name="word" value="sweets excited" placeholder="楽しい/excited">
+      <input type="hidden" name="word" value="suites excited" placeholder="楽しい/excited">
       <a href="javascript:menu4_4.submit()">楽しい/excited</a>
       </form>
       </li>
@@ -171,7 +180,7 @@
    </div>
     <div class="main">
         <div class="trend">
-          <div class="box"><p>トレンド/TREND</p></div>
+          <div class="box"></div>
             <div style="width:100vw; margin:0">
               <%# もし、gifがあったなら %>
               <% if !@url.nil?%>
@@ -192,10 +201,6 @@
                 <% end %>
               <% end %>
     </div>
-
-        </div>
-        <div>
-           <div class="box"><p>ベーシック/basic</p></div>
 
         </div>
     </div>

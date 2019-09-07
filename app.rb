@@ -12,12 +12,24 @@ helpers do
     resp = Net::HTTP.get_response(URI.parse(url))
     buffer = resp.body
     result = JSON.parse(buffer)
+
+    return result["data"]
+  end
+
+  def trending(limit_number)
+    url = "http://api.giphy.com/v1/gifs/trending?api_key=gFEQT6dZUmUK8AvfIyE93m2fB6U1o7aV&limit="+limit_number.to_s
+
+    resp = Net::HTTP.get_response(URI.parse(url))
+    buffer = resp.body
+    result = JSON.parse(buffer)
     return result["data"]
   end
 end
 
+
+
 before do
-  @url = giphy("cat" ,21)
+  @url = trending(21)
 end
 
 get '/' do
@@ -28,7 +40,22 @@ end
 
 post '/search' do
   puts params[:word]
+  @word = params[:word]
 
   @url = giphy(params[:word] ,21)
+
+  if params[:sort] == "new" then
+    @url = @url.sort do |a,b|
+      b["import_datetime"] <=> a["import_datetime"]
+    end
+  end
+
+  if params[:sort] == "popular" then
+    @url = @url.sort do |a,b|
+      b["trending_datetime"] <=> a["trending_datetime"]
+    end
+  end
+ 
+
   erb :index
 end
